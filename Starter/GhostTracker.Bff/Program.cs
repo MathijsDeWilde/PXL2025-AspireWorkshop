@@ -2,6 +2,8 @@ using GhostTracker.Bff.ApiClients;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.AddServiceDefaults();
+
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -9,8 +11,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
 
 // Currently in GhostTracker.Bff program.cs
-builder.Services.AddHttpClient<GhostManagerApi>(static client => client.BaseAddress = new("https://localhost:7122"));
-builder.Services.AddHttpClient<PathFinderApiClient>(static client => client.BaseAddress = new("https://localhost:7176"));
+builder.Services.AddHttpClient<GhostManagerApi>(static client => client.BaseAddress = new("https://ghostmanagerapi"));
+builder.Services.AddHttpClient<PathFinderApiClient>(static client => client.BaseAddress = new("https://pathfinderapi"));
 
 var app = builder.Build();
 
@@ -22,6 +24,8 @@ app.UseCors(static builder =>
     builder.AllowAnyMethod()
         .AllowAnyHeader()
         .AllowAnyOrigin());
+
+app.MapDefaultEndpoints();
 
 app.MapGet("/ghosts/summary", async (GhostManagerApi managerApi, PathFinderApiClient pathFinderApi) =>
 {

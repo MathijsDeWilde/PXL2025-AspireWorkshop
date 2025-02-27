@@ -6,6 +6,10 @@ using GhostTracker.Transmitter.RabbitMQ.Services;
 
 var builder = Host.CreateApplicationBuilder(args);
 
+builder.AddServiceDefaults();
+
+builder.AddRabbitMQClient("messaging");
+
 builder.Services.AddHostedService<Worker>();
 builder.Services.AddScoped<ITransmitter, FakeMessageTransmitter>();
 builder.Services.AddScoped<IGhostManagerPublisher, GhostManagerPublisher>();

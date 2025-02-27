@@ -12,6 +12,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GhostTracker.Transmitter", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GhostTracker.Transmitter.RabbitMQ", "GhostTracker.Transmitter.RabbitMQ\GhostTracker.Transmitter.RabbitMQ.csproj", "{0DE33D2F-AB4B-42B1-B96C-61A73DB60299}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GhostTracker.AppHost", "GhostTracker.AppHost\GhostTracker.AppHost.csproj", "{1D4F616E-DD94-4055-8CC2-7EBB65402F30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GhostTracker.ServiceDefaults", "GhostTracker.ServiceDefaults\GhostTracker.ServiceDefaults.csproj", "{5AAF42B1-5C7A-4586-AB20-47A68BD8D22B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +42,14 @@ Global
 		{0DE33D2F-AB4B-42B1-B96C-61A73DB60299}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DE33D2F-AB4B-42B1-B96C-61A73DB60299}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DE33D2F-AB4B-42B1-B96C-61A73DB60299}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D4F616E-DD94-4055-8CC2-7EBB65402F30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D4F616E-DD94-4055-8CC2-7EBB65402F30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D4F616E-DD94-4055-8CC2-7EBB65402F30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D4F616E-DD94-4055-8CC2-7EBB65402F30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AAF42B1-5C7A-4586-AB20-47A68BD8D22B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AAF42B1-5C7A-4586-AB20-47A68BD8D22B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AAF42B1-5C7A-4586-AB20-47A68BD8D22B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AAF42B1-5C7A-4586-AB20-47A68BD8D22B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

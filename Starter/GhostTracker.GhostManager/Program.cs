@@ -2,6 +2,11 @@ using GhostTracker.GhostManager.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.AddServiceDefaults();
+
+builder.AddRabbitMQClient("messaging");
+builder.Services.AddHostedService<RabbitMqListener>();
+
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -16,6 +21,8 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
+
+app.MapDefaultEndpoints();
 
 app.MapGet("/ghosts", (IGhostQueryService QueryService) =>
 {
